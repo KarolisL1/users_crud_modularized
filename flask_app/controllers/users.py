@@ -8,9 +8,9 @@ from flask_app.models.user import Users
 def index():
     # call the get all classmethod to get all friends
     users = Users.get_all()
-    print(users)
+    # print(users)
     return render_template("index.html", users=users)
-            
+
 @app.route("/users/new")
 def new():
     return render_template("new_user.html")
